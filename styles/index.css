@@ -222,8 +222,12 @@ div.about img {
   top: -9999px;
   left: -9999px;
 }
-.tabs label {
+.label1 {
   display: block;
+  width:120px;
+  height:34px;
+  line-height:10px;
+  text-align:center;
   margin-top:20px;
   margin-left:20px;
   padding: 14px 21px;
@@ -241,10 +245,32 @@ div.about img {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+.label2 {
+    display: block;
+    width:120px;
+    height:34px;
+    line-height:10px;
+    text-align:center;
+    margin-top:20px;
+    margin-left:20px;
+    padding: 14px 21px;
+    border-radius: 2px 2px 0 0;
+    font-size: 16px;
+    font-weight: bold;
+    color:#333333;
+    text-transform: uppercase;
+    background: #dbe2e5;
+    cursor: pointer;
+    position: relative;
+    top: -270px;
+    left:140px;
+   
+}
+
 .tabs label:hover {
   background: #CCC;
 }
-.tabs .tab-content {
+.tab-content1 {
   z-index: 2;
   display: none;
   overflow: hidden;
@@ -253,26 +279,54 @@ div.about img {
   font-size: 12px;
   line-height: 20px;
   padding: 25px;
-  position: absolute;
-  top: 750px;
-  left: 480px;
+  position: relative;
+  top: -20px;
+  left: 20px;
   background: white;
   text-align:left;
 }
-.tabs [id^="tab"]:checked + label {
+.tab-content2 {
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+    width: 500px;
+    height:200px;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 25px;
+    position: relative;
+    top: -75px;
+    left: 20px;
+    background: white;
+    text-align:left;
+}
+
+#tab1:checked + label {
   top: 0;
   padding-top: 17px;
   background: white;
+}
+#tab2:checked + label {
+    position:relative;
+    top: -55px;
+    padding-top: 17px;
+    background: white;
 }
 .tabs [id^="tab"]:checked ~ [id^="tab-content"] {
   display: block;
 }
 
-.tab-content a {
+.tab-content1 a {
 	text-decoration:none;
 	font-size:12px;
 	color:#666666;
 	line-height:30px;
+}
+.tab-content2 a {
+    text-decoration:none;
+    font-size:12px;
+    color:#666666;
+    line-height:30px;
 }
 
 
