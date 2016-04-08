@@ -99,6 +99,10 @@ div.firmIntr {
 	color:black;
 }
 
+div.firmInfo p {
+    text-indent:20px;
+}
+
 div.newsInfo {
 	width:480px;
 	margin-left:20px;

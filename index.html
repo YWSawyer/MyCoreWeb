@@ -7,16 +7,25 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1404.46">
   <link href="styles/index.css" rel="stylesheet" type="text/css"/>
+  
+  <script>
+  function myFunction() {
+	  alert("sdgsg");
+	  x = document.getElementById("product");
+	  alert(x);
+	  x.style.color = "red";
+  }
+  </script>
 </head>
 <body>
 <div class="navBar">
 	<img src="image/LOGO.png" alt="中电科锐"/>
     <ul>
-    	<li class="header"><div style="border-bottom:2px solid #09F;"><a href="#"> 首页 </a></div></li>
-        <li class="header"><div><a href="#"> 产品 </a></div></li>
-        <li class="header"><div><a href="#"> 成功案例 </a></div></li>
-        <li class="header"><div><a href="#"> 新闻中心 </a></div></li>
-        <li class="header"><div><a href="#"> 关于我们 </a></div></li>     
+    	<li class="header"><div style="border-bottom:2px solid #09F;margin-right:10px;"><a href="#"> 首页 </a></div></li>
+        <li class="header"><div><a href="#" id="product" onclick="myFunction();"> 产品 </a></div></li>
+        <li class="header"><div><a href="#" id="case"> 成功案例 </a></div></li>
+        <li class="header"><div><a href="#" id="news"> 新闻中心 </a></div></li>
+        <li class="header"><div><a href="#" id="about"> 关于我们 </a></div></li>     
     </ul>
 </div>
 <div class="adv">
@@ -64,7 +73,7 @@
 			</td>
             <td>
             	<div class="firmInfo">
-                	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京中电科锐科技有限公司是由三安光电集团投资发起成立的具有独立法人资格的高科技企业，专注于芯片级电力电子产品的研发，为电力行业、航空业提供芯片级专业综合解决方案。<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司位于北京市丰台区总部基地，设有厦门分公司、深圳子公司和南京研发中心，已经取得软件企业认证、ISO9001认证、CMMI3、国家高新技术企业认证和信息系统集成三级资质，汇集了一大批集成电路行业、电力电子设计行业经验丰富的技术精英和业务专家。 成立至今，公司一直以“质量精益求精，客户需求至上”作为经营宗旨………</p>
+                	<p>北京中电科锐科技有限公司是由三安光电集团投资发起成立的具有独立法人资格的高科技企业，专注于芯片级电力电子产品的研发，为电力行业、航空业提供芯片级专业综合解决方案。</p><p style="position:relative;top:-15px;">公司位于北京市丰台区总部基地，设有厦门分公司、深圳子公司和南京研发中心，已经取得软件企业认证、ISO9001认证、CMMI3、国家高新技术企业认证和信息系统集成三级资质，汇集了一大批集成电路行业、电力电子设计行业经验丰富的技术精英和业务专家。 成立至今，公司一直以“质量精益求精，客户需求至上”作为经营宗旨………</p>
                 </div>
             </td>
 		</tr>
