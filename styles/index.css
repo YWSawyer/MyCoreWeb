@@ -48,10 +48,21 @@ li div {
 	float:left;	
 	text-align:center;
 	margin-top:20px;
+	margin-right:10px;
 	vertical-align:central;
 }
+
+div.solidLine {
+	margin:0;
+	width:100px;
+	height:0px;
+	border-bottom:2px solid #09F;
+	position:relative;
+	top:-2px;
+	transition:transform 0.3s;
+}
 li div:hover {
-	border-bottom:2px solid #6CF;	
+	border-bottom:2px solid #9CF;	
 }
 div.adv {
 	width:1000px;

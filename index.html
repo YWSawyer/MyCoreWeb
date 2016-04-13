@@ -7,25 +7,37 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1404.46">
   <link href="styles/index.css" rel="stylesheet" type="text/css"/>
+  <script src="./js/jquery-1.10.2.min.js" type="text/javascript">
+  </script>
+  
   
   <script>
-  function myFunction() {
-	  alert("sdgsg");
-	  x = document.getElementById("product");
-	  alert(x);
-	  x.style.color = "red";
+  function myFunction(title) {
+	  clickStyle(title);
   }
+  
+  function clickStyle(name) {
+	  var titles = new Array("home","product","successCase","newsCenter","aboutUs");
+	  for (title in titles) {
+			if (name==titles[title]){
+				var offset = title*110;
+				var x = document.getElementById("titleLine");
+				x.style.transform = "translate("+offset+"px,0px)";			
+			//$("#titleLine").css("transform","translate("+offset+"px,0px)");
+	  }
+   }
+ }
   </script>
 </head>
 <body>
 <div class="navBar">
 	<img src="image/LOGO.png" alt="中电科锐"/>
     <ul>
-    	<li class="header"><div style="border-bottom:2px solid #09F;margin-right:10px;"><a href="#"> 首页 </a></div></li>
-        <li class="header"><div><a href="#" id="product" onclick="myFunction();"> 产品 </a></div></li>
-        <li class="header"><div><a href="#" id="case"> 成功案例 </a></div></li>
-        <li class="header"><div><a href="#" id="news"> 新闻中心 </a></div></li>
-        <li class="header"><div><a href="#" id="about"> 关于我们 </a></div></li>     
+    	<li class="header"><div id="home" onclick="myFunction('home')"><a href="#"> 首页 </a><div class="solidLine" id="titleLine"></div></div></li>
+        <li class="header"><div id="product" onclick="myFunction('product')"><a href="#"> 产品 </a></div></li>
+        <li class="header"><div id="successCase" onclick="myFunction('successCase')"><a href="#"> 成功案例 </a></div></li>
+        <li class="header"><div id="newsCenter" onclick="myFunction('newsCenter')"><a href="#"> 新闻中心 </a></div></li>
+        <li class="header"><div id="aboutUs" onclick="myFunction('aboutUs')"><a href="#"> 关于我们 </a></div></li>     
     </ul>
 </div>
 <div class="adv">
