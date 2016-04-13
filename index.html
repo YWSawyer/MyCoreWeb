@@ -6,6 +6,7 @@
   <title></title>
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1404.46">
+  <link href="styles/sliderStyle.css" rel="stylesheet" type="text/css">
   <link href="styles/index.css" rel="stylesheet" type="text/css"/>
   <script src="./js/jquery-1.10.2.min.js" type="text/javascript">
   </script>
@@ -40,9 +41,29 @@
         <li class="header"><div id="aboutUs" onclick="myFunction('aboutUs')"><a href="#"> 关于我们 </a></div></li>     
     </ul>
 </div>
-<div class="adv">
-    <img src="image/bannerPic.png" alt="解决方案"/>
-</div>
+<!--div class="slider">
+    <img src="image/bannerPic.png" alt="解决方案"/>    
+</div-->
+
+<div class="slider">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slide"> <a href='#'><img src="image/img1.png" alt="解决方案"></a></div>
+                    <div class="slide"> <a href='#'><img src="image/img2.png" alt="解决方案"></a></div>
+                    <div class="slide"> <a href='#'><img src="image/img3.png" alt="解决方案"></a></div>
+                    <div class="slide"> <a href='#'><img src="image/img4.png" alt="解决方案"></a></div>
+                </div>
+            </div>
+ </div>
+  <script src="js/slider.js"></script> 
+        <script type="text/javascript">
+            (function() {
+                Slider.init({
+                    target: $('.slider'),
+                    time: 3000
+                });
+            })();
+  </script>      
 <div class="content">
 	<table>
 		<tr>
@@ -99,7 +120,7 @@
                 <label for="tab1" class="label1">产品</label>
                 <div id="tab-content1" class="tab-content1">
                 <img src="image/矩形-3.png">&nbsp;&nbsp;<a href="#">关口表</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/矩形-3.png">&nbsp;&nbsp;<a href="#">"CR15101"系列故障指示器</a><br/>
-                <img src="image/矩形-3.png">&nbsp;&nbsp;<a href="#">故障指示器</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/矩形-3.png">&nbsp;&nbsp;<a href="#">"CR15101"充电汽车充电运营</a><br/>
+                <img src="image/矩形-3.png">&nbsp;&nbsp;<a href="#">故障指示器</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/矩形-3.png">&nbsp;&nbsp;<a href="#">"CR15101"充电汽车充电运营</a><br/>
                 <img src="image/矩形-3.png">&nbsp;&nbsp;<a href="#">关口表</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/矩形-3.png">&nbsp;&nbsp;<a href="#">"CR15101"预付费售电系统</a><br/>
                 <img src="image/矩形-3.png">&nbsp;&nbsp;<a href="#">关口表</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="image/矩形-3.png">&nbsp;&nbsp;<a href="#">"CR15101"关口表</a>
                 </div>
