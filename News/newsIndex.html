@@ -6,6 +6,23 @@
 <link href="../styles/news.css" type="text/css" rel="stylesheet" />
 <script>
 
+ function iframeHeight() {
+	// var ifm= document.getElementById("homeF");
+	 var ifm= $("#newsFrameId")[0];  
+     var subWeb = document.frames ? document.frames["homeF"].document : ifm.contentDocument;   
+     if(ifm != null && subWeb != null) {
+         ifm.height = subWeb.body.scrollHeight;
+         ifm.width = subWeb.body.scrollWidth;   
+       }   	 
+ }
+ 
+ function aboutFrameH(iframeH){
+			//alert(iframeH)
+			$("#newsFrameId").height(iframeH);
+			$(".backView").height(iframeH);
+			//parent.indexFrameH(iframeH);
+		}
+
 </script>
 </head>
 
@@ -37,7 +54,7 @@
         </ul>
     </div>
     <div class="frameDiv">
-    	<iframe class="newsFrame" name="newsFrameName" id="newsFrameId"></iframe>
+    	<iframe class="newsFrame"  src="hotNews.html" name="newsFrameName" scrolling="no" id="newsFrameId"></iframe>
     </div>
 </div>
 </body>
