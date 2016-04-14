@@ -14,12 +14,19 @@ div {
 	width:1000px;
 	margin:0 auto;	
 }
-div.navBar {
+.mainFrame {
 	width:1000px;
-	margin:0 auto;
+	background:white;
+}
+div.navBar {
 	height:80px;
 	background-color:white;
 	padding-top:0px;
+	position:fixed;
+	left:auto;
+	right:auto;
+	z-index:999;
+	box-shadow:1px 1px 1px #CCC;
 }
 div.navBar img {
 	margin:24px;	
@@ -67,7 +74,7 @@ div.navBar li div:hover {
 }
 
 div.content {
-	height:300px;
+	height:auto;
 	background-color:white;	
 	clear:both;
 }
@@ -75,6 +82,7 @@ div.newsTitle {
 	width:480px;
 	height:60px;
 	margin-left:20px;
+	margin-top:80px;
 	
 	font-size:14px;
 	font-weight:bold;	
@@ -97,6 +105,7 @@ div.firmIntr {
 	width:460px;
 	height:60px;
 	margin-left:25px;
+	margin-top:80px;
 	font-size:14px;
 	font-weight:bold;	
 	color:black;

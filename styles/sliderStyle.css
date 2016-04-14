@@ -61,6 +61,8 @@ h1 {
 	width:1000px;
 	margin:0 auto;
 	height:320px;
+	position:relative;
+	top:80px;
 }
 .slider img {
 	width:1000px;

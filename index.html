@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
+  <title>北京中电科锐技术有限公司</title>
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1404.46">
   <link href="styles/sliderStyle.css" rel="stylesheet" type="text/css">
@@ -17,6 +17,7 @@
 	  clickStyle(title);
   }
   
+  
   function clickStyle(name) {
 	  var titles = new Array("home","product","successCase","newsCenter","aboutUs");
 	  for (title in titles) {
@@ -28,23 +29,33 @@
 	  }
    }
  }
+ 
+ function iframeHeight() {
+	// var ifm= document.getElementById("homeF");
+	 var ifm= $("#homeF")[0];  
+     var subWeb = document.frames ? document.frames["homeF"].document : ifm.contentDocument;   
+     if(ifm != null && subWeb != null) {
+         ifm.height = subWeb.body.scrollHeight;
+         ifm.width = subWeb.body.scrollWidth;   
+       }   	 
+ }
+ 
+ 
   </script>
 </head>
 <body>
+<div>
 <div class="navBar">
 	<img src="image/LOGO.png" alt="中电科锐"/>
     <ul>
-    	<li class="header"><div id="home" onclick="myFunction('home')"><a href="#"> 首页 </a><div class="solidLine" id="titleLine"></div></div></li>
-        <li class="header"><div id="product" onclick="myFunction('product')"><a href="#"> 产品 </a></div></li>
-        <li class="header"><div id="successCase" onclick="myFunction('successCase')"><a href="#"> 成功案例 </a></div></li>
-        <li class="header"><div id="newsCenter" onclick="myFunction('newsCenter')"><a href="#"> 新闻中心 </a></div></li>
-        <li class="header"><div id="aboutUs" onclick="myFunction('aboutUs')"><a href="#"> 关于我们 </a></div></li>     
+    	<li class="header"><a href="mainFrame/homeFrame.html" target="homeFrame"> <div id="home" onclick="myFunction('home')">首页 <div class="solidLine" id="titleLine"></div></div></a></li>
+        <li class="header"><a href="#"> <div id="product" onclick="myFunction('product')">产品 </div></a></li>
+        <li class="header"><a href="#"><div id="successCase" onclick="myFunction('successCase')"> 成功案例 </div></a></li>
+        <li class="header"><a href="News/newsIndex.html" target="homeFrame"><div id="newsCenter" onclick="myFunction('newsCenter')"> 新闻中心 </div></a></li>
+        <li class="header"><a href="#"><div id="aboutUs" onclick="myFunction('aboutUs')"> 关于我们</div> </a></li>     
     </ul>
 </div>
-<!--div class="slider">
-    <img src="image/bannerPic.png" alt="解决方案"/>    
-</div-->
-
+<!--div>
 <div class="slider">
             <div class="slider-container">
                 <div class="slider-wrapper">
@@ -111,7 +122,8 @@
             </td>
 		</tr>
 	</table>
-</div>
+</div-->
+<iframe class="mainFrame"  id="homeF" name="homeFrame" src="mainFrame/homeFrame.html" frameborder="0" scrolling="no" seamless  onload="iframeHeight()"></iframe>
 <div class="content2">
 	<div class="news">
         <ul class="tabs">
@@ -173,4 +185,8 @@
 <p>Copyright@北京中电科锐科技有限公司 All Right Reserved.京ICP证0199116号</p>
 </div>
 </body>
+<script>
+ $("#homeF").attr("src","./mainFrame/homeFrame.html");
+
+</script>
 </html>
