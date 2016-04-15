@@ -31,14 +31,26 @@
  }
  
  function iframeHeight() {
-	// var ifm= document.getElementById("homeF");
-	 var ifm= $("#homeF")[0];  
+	 var ifm= document.getElementById("homeF");
+	// var ifm= $("#homeF")[0];  
      var subWeb = document.frames ? document.frames["homeF"].document : ifm.contentDocument;   
      if(ifm != null && subWeb != null) {
-         ifm.height = subWeb.body.scrollHeight;
-         ifm.width = subWeb.body.scrollWidth;   
-       }   	 
+        // ifm.height = subWeb.body.scrollHeight;
+		 $(ifm).css("height",subWeb.body.scrollHeight);
+		switch (subWeb.title)
+		{
+			case "主页": clickStyle("home");
+		    break;
+		}
+		 
+       } 
+	  	
  }
+ 
+  function mainFrameH(iframeH){
+			//alert(iframeH)
+			$("#homeF").css("height",iframeH);
+		}
  
  
   </script>
@@ -185,8 +197,4 @@
 <p>Copyright@北京中电科锐科技有限公司 All Right Reserved.京ICP证0199116号</p>
 </div>
 </body>
-<script>
- $("#homeF").attr("src","./mainFrame/homeFrame.html");
-
-</script>
 </html>

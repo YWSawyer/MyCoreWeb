@@ -4,24 +4,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>新闻</title>
 <link href="../styles/news.css" type="text/css" rel="stylesheet" />
+<script src="../js/jquery-1.10.2.min.js" type="text/javascript"></script>
+
 <script>
 
  function iframeHeight() {
-	// var ifm= document.getElementById("homeF");
-	 var ifm= $("#newsFrameId")[0];  
-     var subWeb = document.frames ? document.frames["homeF"].document : ifm.contentDocument;   
+	 var ifm= document.getElementById("newsFrameId");
+	// var ifm= $("#newsFrameId")[0];  
+     var subWeb = document.frames ? document.frames["newsFrameId"].document : ifm.contentDocument;   
      if(ifm != null && subWeb != null) {
-         ifm.height = subWeb.body.scrollHeight;
-         ifm.width = subWeb.body.scrollWidth;   
-       }   	 
+		 $(ifm).css("height",subWeb.body.scrollHeight);
+		 $(".newsNav").css("height",subWeb.body.scrollHeight);
+        // ifm.width = subWeb.body.scrollWidth; 
+		parent.mainFrameH(document.body.scrollHeight);  
+       }
  }
  
- function aboutFrameH(iframeH){
-			//alert(iframeH)
-			$("#newsFrameId").height(iframeH);
-			$(".backView").height(iframeH);
-			//parent.indexFrameH(iframeH);
-		}
+
 
 </script>
 </head>
@@ -35,17 +34,6 @@
         <p class="title3" style="float:right">网站首页>新闻中心</p>
         <p class="title1">新闻中心</p>
     </div>
-    <!--div class="newsNav">
-        <div class="index" style="margin-top:30px;">
-        	<a href="#" ><p class="title2" style="color:red;">&#9658 最热新闻</p>
-        </div>
-        <div class="index">
-        	<a href="#" ><p class="title2">&#9658 企业新闻</p>
-        </div>
-        <div class="index" style="border-bottom:1px solid #CCC;">
-        	<a href="#" ><p class="title2">&#9658 行业新闻</p>
-        </div>
-    </div-->
     <div class="newsNav">
     	<ul>
         	<a href="#" style="color:red;"><li>&#9658 最热新闻</li></a>
@@ -54,7 +42,7 @@
         </ul>
     </div>
     <div class="frameDiv">
-    	<iframe class="newsFrame"  src="hotNews.html" name="newsFrameName" scrolling="no" id="newsFrameId"></iframe>
+    	<iframe class="newsFrame"  src="hotNews.html" name="newsFrameName" scrolling="no" id="newsFrameId" onload="iframeHeight()"></iframe>
     </div>
 </div>
 </body>
