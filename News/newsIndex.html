@@ -20,6 +20,12 @@
        }
  }
  
+ $(document).ready(function(e) {
+    $(".newsNav ul a").click(function (){
+			$(this).siblings().css('color','#666');
+			$(this).css('color','red');
+		});
+});
 
 
 </script>
@@ -36,9 +42,9 @@
     </div>
     <div class="newsNav">
     	<ul>
-        	<a href="#" style="color:red;"><li>&#9658 最热新闻</li></a>
-            <a href="#"><li>&#9658 最热新闻</li></a>
-            <a href="#"><li>&#9658 最热新闻</li></a>
+        	<a href="hotNews.html" style="color:red;" target="newsFrameName"><li>&#9658 最热新闻</li></a>
+            <a href="businessNews.html" target="newsFrameName"><li>&#9658 企业新闻</li></a>
+            <a href="insdustryNews.html" target="newsFrameName"><li>&#9658 行业新闻</li></a>
         </ul>
     </div>
     <div class="frameDiv">

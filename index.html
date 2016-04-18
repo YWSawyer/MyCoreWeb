@@ -36,7 +36,8 @@
      var subWeb = document.frames ? document.frames["homeF"].document : ifm.contentDocument;   
      if(ifm != null && subWeb != null) {
         // ifm.height = subWeb.body.scrollHeight;
-		 $(ifm).css("height",subWeb.body.scrollHeight);
+		//ifm.style.height = subWeb.body.scrollHeight;
+		$(ifm).css("height",subWeb.body.scrollHeight);
 		switch (subWeb.title)
 		{
 			case "主页": clickStyle("home");
